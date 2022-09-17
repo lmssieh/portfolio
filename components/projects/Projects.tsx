@@ -1,12 +1,14 @@
 import Link from "next/link";
-import { project } from "../../utils/types";
+import { type project } from "../../utils/types";
 import Twemoji from "../UI/Twemoji";
-
 import ProjectCard from "./ProjectCard";
+
 function Projects() {
 	const projectsInfo: project[] = [
 		{
 			title: "REDOIT!",
+			url: "https://redoit.app/",
+			sourceCode: null,
 			description:
 				"REDOIT! is a habit tracker web app that helps you build good habits and reach your goals.",
 			image: "/images/project-ss-01.png",
@@ -14,12 +16,16 @@ function Projects() {
 		},
 		{
 			title: "MoodRooster",
+			url: "https://github.com/lmssieh/moodrooster",
+			sourceCode: "https://github.com/lmssieh/moodrooster",
 			description: "Mood tracker & journaling web app.",
 			image: "/images/project-ss-02.png",
 			icons: ["typescript", "react", "windicss", "firebase"],
 		},
 		{
 			title: "Custom Surviv Skins",
+			url: "https://greasyfork.org/en/scripts/394362",
+			sourceCode: "https://github.com/lmssieh/survivMods",
 			description:
 				"a free and purely cosmetic script that lets you use custom skins during games, it even lets you make your own skins!",
 			image: "/images/project-ss-03.png",
@@ -38,13 +44,15 @@ function Projects() {
 			{projectsInfo.map((project) => (
 				<ProjectCard key={project.title} project={project} />
 			))}
-			<div>
-				<Link href="/work">
-					<a className="text-lg underline hover:text-orange-400">
-						see all projects ↗︎
-					</a>
-				</Link>
-			</div>
+			{false && (
+				<div>
+					<Link href="/work">
+						<a className="text-lg underline hover:text-orange-400">
+							see all projects ↗︎
+						</a>
+					</Link>
+				</div>
+			)}
 		</div>
 	);
 }

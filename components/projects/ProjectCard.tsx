@@ -51,25 +51,30 @@ function ProjectCard({ project }: { project: project }) {
 
 			<div className="my-4 md:ml-2 md:px-3 flex flex-col">
 				<div className="flex items-center">
-					<a href="#" className="">
-						<h5 className="flex items-center text-2xl underline">
-							{project.title}
-						</h5>
+					<a
+						href={project.url}
+						target="_blank"
+						rel="noreferrer"
+						className="flex items-center text-2xl underline hover:text-orange-400"
+					>
+						{project.title}
 					</a>
 				</div>
 				<p className="mt-3">{project.description}</p>
 
 				<div className="mt-3 md:mt-auto">
-					<div className="flex items-center py-1" v-if="sourceCode">
-						<a
-							href="https://github.com/lmssieh"
-							target="_blank"
-							rel="noreferrer"
-							className="underline hover:text-orange-400"
-						>
-							Source Code ↗︎
-						</a>
-					</div>
+					{project.sourceCode && (
+						<div className="flex items-center py-1">
+							<a
+								href={project.sourceCode}
+								target="_blank"
+								rel="noreferrer"
+								className="underline hover:text-orange-400"
+							>
+								Source Code ↗︎
+							</a>
+						</div>
+					)}
 					<div className="flex items-center py-1">
 						<p className="mr-2">Built with:</p>
 						<div className="flex items-center gap-2 children:(h-6 w-6)">
