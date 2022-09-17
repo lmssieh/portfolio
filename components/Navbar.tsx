@@ -23,23 +23,14 @@ function Navbar() {
 					<Link href="/"> lmssieh </Link>
 				</h1>
 				<ul className="flex items-center">
-					{/* <li
-						className="mx-3 tracking-widest hover:text-orange-500"
-						style={styles("/about")}
-					>
-						<Link href="/about"> ABOUT </Link>
-					</li> */}
 					<li
 						className="mx-3 tracking-widest hover:text-orange-500 "
 						style={styles("/work")}
 					>
 						<Link href="/work"> WORK </Link>
 					</li>
-					<li
-						className="mx-3 tracking-widest hover:text-orange-500 "
-						style={styles("/work")}
-					>
-						<Link href="/work"> RESUME </Link>
+					<li className="mx-3 tracking-widest hover:text-orange-500 ">
+						<a href="#"> RESUME </a>
 					</li>
 				</ul>
 			</nav>
