@@ -25,7 +25,7 @@ function Footer() {
 						<FiTwitter className="h-4 w-4" />
 						<a
 							className="underline ml-1 hover:text-orange-500"
-							href="https://twitter.com/"
+							href="https://twitter.com/lmssiehdev"
 						>
 							twitter
 						</a>
@@ -34,7 +34,7 @@ function Footer() {
 						<FiCodepen className="h-4 w-4" />
 						<a
 							className="underline ml-1 hover:text-orange-500"
-							href="https://codepen.com/"
+							href="https://codepen.com/lmssieh"
 						>
 							codepen
 						</a>
